@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import AdminPage from "./components/AdminPage";
+import EventPage from "./components/EventPage";
 
-function App() {
+const App = () => {
+  const [showEvents, setShowEvents] = useState(false);
+
+  const handleEventAdded = () => {
+    setShowEvents(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {showEvents ? <EventPage /> : <AdminPage onEventAdded={handleEventAdded} />}
     </div>
   );
-}
+};
 
 export default App;

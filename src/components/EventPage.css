@@ -1,126 +1,90 @@
-/* Entire Page - Deep Dark Theme */
-body {
-  background: linear-gradient(135deg, #000814, #001d3d, #003566);
-  color: white;
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-/* Container */
+/* Main Container */
 .event-container {
-  padding: 30px;
+  text-align: center;
+  padding: 20px;
+  background: radial-gradient(circle at top, #031b34, #021020);
   min-height: 100vh;
 }
 
 /* Title Styling */
-h1 {
-  font-size: 34px;
-  font-weight: bold;
-  text-shadow: 3px 3px 15px rgba(0, 128, 255, 0.8);
-  letter-spacing: 1px;
-}
-
-/* Next Event Countdown */
-.next-event {
-  background: rgba(0, 128, 255, 0.2);
-  padding: 14px;
-  border-radius: 12px;
-  display: inline-block;
-  margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(0, 128, 255, 0.6);
-  transition: transform 0.3s ease-in-out;
-}
-
-.next-event:hover {
-  transform: scale(1.06);
-  box-shadow: 0 0 20px rgba(0, 128, 255, 0.9);
-}
-
-/* Countdown Timer */
-.countdown {
+.event-title {
   font-size: 28px;
   font-weight: bold;
-  color: #66ccff;
-  text-shadow: 2px 2px 10px rgba(0, 128, 255, 0.5);
+  color: #00d8ff;
+  margin-bottom: 20px;
 }
 
-/* Event List Layout */
+/* Event Grid */
 .event-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
+  gap: 20px;
 }
 
-/* Event Cards - Modern Neon Glow */
+/* Event Card */
 .event-card {
+  width: 350px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  background: #062b4f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
   display: flex;
   align-items: center;
-  width: 380px;
-  background: rgba(10, 20, 40, 0.95);
-  box-shadow: 0 0 20px rgba(0, 128, 255, 0.4);
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  text-align: left;
+  position: relative;
 }
 
 .event-card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 30px rgba(0, 128, 255, 0.8);
+  transform: scale(1.05);
 }
 
-/* Event Date - Glowing Blue */
-.event-date {
-  background: linear-gradient(135deg, #0044cc, #007bff);
-  color: white;
-  padding: 18px;
+/* Date Box (Left Side) */
+.date-box {
+  background: #008cff;
+  padding: 10px;
+  width: 80px;
+  border-radius: 8px;
   text-align: center;
-  font-size: 24px;
+  position: absolute;
+  left: 10px;
+}
+
+.date-weekday {
+  font-size: 14px;
   font-weight: bold;
-  width: 90px;
-  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
-  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
-.event-date span {
+.date-month {
   font-size: 16px;
-  font-weight: 500;
-}
-
-/* Event Details */
-.event-details {
-  padding: 18px;
-  flex-grow: 1;
-}
-
-.event-details h3 {
-  font-size: 20px;
   font-weight: bold;
-  color: #66ccff;
-  text-shadow: 2px 2px 15px rgba(102, 204, 255, 0.7);
+  color: #fff;
 }
 
-.event-details p {
-  font-size: 16px;
-  color: #bbb;
-  margin-top: 8px;
+.date-day {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
 }
 
-/* Smooth Entry Animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Event Info */
+.event-info {
+  margin-left: 100px; /* Moves text away from date box */
 }
 
-.event-card {
-  animation: fadeIn 0.8s ease-in-out;
+.event-info h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #00d8ff;
+}
+
+.event-info p {
+  font-size: 14px;
+  color: #c5e1f9;
+  margin-bottom: 5px;
 }

@@ -8,15 +8,17 @@
     "dev": "npx kill-port 5000 && nodemon server.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^7.6.0",
+    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^7.8.6"
   },
   "devDependencies": {
     "kill-port": "^2.0.1",
     "nodemon": "^3.0.1"
   },
   "author": "Your Name",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": []
 }

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import for navigation
 import axios from "axios";
 import "./AdminPage.css";
 
-const AdminPage = ({ onEventAdded }) => {
+const AdminPage = () => {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
+  const navigate = useNavigate(); // Initialize navigation
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +18,7 @@ const AdminPage = ({ onEventAdded }) => {
       
       if (response.status === 201) {
         alert("✅ Event Added Successfully!");
-        onEventAdded();
+        navigate("/events"); // Redirect to Event Page after success
       } else {
         alert("⚠ Something went wrong. Try again.");
       }
